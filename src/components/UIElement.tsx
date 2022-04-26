@@ -11,8 +11,8 @@ interface Props {
 function UIElement({label, row, column, width, height, onClick, action}: Props) {
     let styleObject = {
         "display": "flex",
-        "align-items": "center",
-        "justify-content": "center",
+        "alignItems": "center",
+        "justifyContent": "center",
         "border": "1px solid black",
         "margin": "2px",
         "gridRowStart": row,
