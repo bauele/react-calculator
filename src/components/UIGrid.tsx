@@ -4,12 +4,10 @@ import UIElement from './UIElement';
 interface Props {
     width: 1 | 2 | 3 | 4 | 5;
     height: 1 | 2 | 3 | 4 | 5;
-    cells: number[];
     uiElements: UIElement[];
 };
 
-export function UIGrid( {width, height, cells, uiElements}: Props) {
-
+export function UIGrid( {width, height, uiElements}: Props) {
     const cellComponents = uiElements.map( (x: UIElement) => {
         let styleObject = {
             "color": "red",
@@ -23,7 +21,7 @@ export function UIGrid( {width, height, cells, uiElements}: Props) {
     });
     
     return ( 
-        <div className={`grid grid-cols-${width} grid-rows-${height}`}>
+        <div id="grid" className={`grid-cols-${width} grid-rows-${height}`}>
             {cellComponents}
         </div>
     )
