@@ -28,7 +28,8 @@ function Calculator({uiArray}: Props) {
                         return operationClicked(x.label, x.action);
                     }
                 }}
-                action={x.action? x.action: null} />
+                action={x.action? x.action: null} 
+                style={x.style? x.style: {} }/>
         )
     })
 

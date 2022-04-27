@@ -6,9 +6,10 @@ interface Props {
     height: number;
     onClick: any;
     action: any;
+    style: {};
 }
 
-function UIElement({label, row, column, width, height, onClick, action}: Props) {
+function UIElement({label, row, column, width, height, onClick, action, style}: Props) {
     let styleObject = {
         "display": "flex",
         "alignItems": "center",
@@ -19,6 +20,7 @@ function UIElement({label, row, column, width, height, onClick, action}: Props) 
         "gridRowEnd": row + height,            
         "gridColumnStart": column,
         "gridColumnEnd": column + width,
+        ...style
     }
 
     return (
